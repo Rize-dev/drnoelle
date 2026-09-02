@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dra. Noelle Breda Teixeira - CRM-PE 36749 | Médica Oftalmologista especialista em Plástica Ocular, doenças da órbita e vias lacrimais. Atendimentos em Recife, Caruaru e Santa Cruz do Capibaribe - PE.">
+    <title>Dra. Noelle Breda Teixeira | Oftalmologista - Plástica Ocular</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #005f73;
+            --secondary-color: #0a9396;
+            --accent-color: #e9d8a6;
+            --text-dark: #2b2d42;
+            --text-light: #f8f9fa;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+            font-weight: 400;
+            font-size: 0.9rem;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .hero .crm {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto 35px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-accent:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            background-color: #e0e7e5;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .credentials {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .credentials h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .credentials ul {
+            list-style: none;
+        }
+
+        .credentials li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .credentials li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Specialties Section */
+        .specialties {
+            background-color: var(--white);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        /* Locations Section */
+        .locations {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+
+        .locations .section-title {
+            color: var(--white);
+        }
+
+        .locations .section-title::after {
+            background-color: var(--accent-color);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .location-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .location-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-card p {
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .location-card i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .whatsapp-link {
+            color: var(--whatsapp);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .whatsapp-link:hover {
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            background: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .about-content, .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 400px;
+                order: -1;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-accent, .btn-whatsapp {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    Dra. Noelle Breda Teixeira
+                    <span>Oftalmologista | CRM-PE 36749</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#locais">Locais de Atendimento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <a href="https://api.whatsapp.com/message/RDDL4AASO54AG1?autoload=1&app_absent=0&utm_source=ig" target="_blank" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> Agendar Consulta
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Dra. Noelle Breda Teixeira</h1>
+            <div class="subtitle">Médica Oftalmologista | Especialista em Plástica Ocular</div>
+            <div class="crm">CRM-PE 36749</div>
+            <p>Fellow em Plástica Ocular pela Fundação Altino Ventura (FAV). Mais de 600 cirurgias palpebrais realizadas. Atendimento humanizado e especializado em Recife, Caruaru e Santa Cruz do Capibaribe - PE.</p>
+            <div class="hero-buttons">
+                <a href="https://api.whatsapp.com/message/RDDL4AASO54AG1?autoload=1&app_absent=0&utm_source=ig" target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                </a>
+                <a href="https://www.instagram.com/dranoellebreda/" target="_blank" class="btn-accent">
+                    <i class="fab fa-instagram"></i> Ver Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">600+</span>
+                    <span class="stat-label">Cirurgias Realizadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">FAV</span>
+                    <span class="stat-label">Fellowship em Plástica Ocular</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Cidades Atendidas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Dedicação ao Paciente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre a Dra. Noelle Breda</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/pLgjqNWh/dr-noelle.jpg" alt="Dra. Noelle Breda Teixeira - Oftalmologista">
+                </div>
+                <div class="about-text">
+                    <h3>Excelência e dedicação em cada atendimento</h3>
+                    <p>A <strong>Dra. Noelle Breda Teixeira</strong> é médica oftalmologista com especialização em <strong>Plástica Ocular, doenças da órbita e vias lacrimais</strong>.</p>
+                    <p>Formada pela Faculdade Santa Marcelina em São Paulo (2019), realizou residência médica em Oftalmologia e completou seu <strong>Fellowship em Plástica Ocular pela renomada Fundação Altino Ventura (FAV)</strong>, referência nacional em oftalmologia.</p>
+                    <p>Atualmente atua como <strong>preceptora de ensino da FAV</strong>, formando novos especialistas, e já realizou <strong>mais de 600 cirurgias palpebrais</strong>, sempre pautada pela ética, atualização científica e um atendimento humanizado.</p>
+                    
+                    <div class="credentials">
+                        <h4><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h4>
+                        <ul>
+                            <li>Graduação em Medicina - Faculdade Santa Marcelina (FSM, 2019)</li>
+                            <li>Residência Médica em Oftalmologia - São Paulo</li>
+                            <li>Fellowship em Plástica Ocular - Fundação Altino Ventura (FAV), Recife</li>
+                            <li>Preceptora de Ensino - Fundação Altino Ventura</li>
+                            <li>Membro da Liga Acadêmica de Radiologia (desde 2015)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="especialidades" class="specialties">
+        <div class="container">
+            <h2 class="section-title">Áreas de Atuação</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Plástica Ocular</h3>
+                    <p>Tratamento cirúrgico e clínico de condições que afetam as pálpebras, sobrancelhas e região ao redor dos olhos, visando funcionalidade e estética.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-procedures"></i></div>
+                    <h3>Blefaroplastia</h3>
+                    <p>Cirurgia de pálpebras para remoção de excesso de pele e gordura, proporcionando rejuvenescimento natural e harmonioso do olhar.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-allergies"></i></div>
+                    <h3>Doenças da Órbita</h3>
+                    <p>Diagnóstico e manejo de patologias que acometem a cavidade orbitária, garantindo a proteção e o bom funcionamento do globo ocular.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Vias Lacrimais</h3>
+                    <p>Soluções para obstruções e problemas no sistema de drenagem lacrimal, aliviando sintomas como lacrimejamento excessivo e infecções.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-syringe"></i></div>
+                    <h3>Botox Terapêutico</h3>
+                    <p>Aplicação de toxina botulínica para tratamento de espasmos palpebrais e outras condições neurológicas que afetam a região ocular.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Oftalmologia Geral</h3>
+                    <p>Consultas completas de oftalmologia, exames de rotina, diagnóstico e tratamento de doenças oculares diversas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locais de Atendimento -->
+    <section id="locais" class="locations">
+        <div class="container">
+            <h2 class="section-title">Locais de Atendimento</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Recife</h3>
+                    <p><i class="fas fa-building"></i> <strong>Empresarial Padre Roma</strong></p>
+                    <p><i class="fas fa-road"></i> Rua Padre Roma, 120 - Tamarineira</p>
+                    <p><i class="fas fa-city"></i> Recife - PE</p>
+                    <p style="margin-top: 15px;"><i class="fas fa-user-md"></i> Atendimento especializado em consultório particular</p>
+                </div>
+                <div class="location-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Caruaru</h3>
+                    <p><i class="fas fa-clinic"></i> <strong>OftVista - Clínica de Olhos</strong></p>
+                    <p><i class="fas fa-road"></i> Av. Rio Branco, 343 - Nossa Senhora das Dores</p>
+                    <p><i class="fas fa-city"></i> Caruaru - PE | CEP: 55004-180</p>
+                    <p><i class="fas fa-phone"></i> (81) 99517-2382</p>
+                </div>
+                <div class="location-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Santa Cruz do Capibaribe</h3>
+                    <p><i class="fas fa-clinic"></i> <strong>OftVista - Clínica de Olhos</strong></p>
+                    <p><i class="fas fa-road"></i> Av. Padre Zuzinha, 313 - Centro</p>
+                    <p><i class="fas fa-city"></i> Santa Cruz do Capibaribe - PE | CEP: 55192-000</p>
+                    <p><i class="fas fa-phone"></i> (81) 97900-2381</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Agende sua consulta</h3>
+                    
+                    <div class="contact-item">
+                        <strong><i class="fab fa-whatsapp"></i> WhatsApp</strong>
+                        <a href="https://api.whatsapp.com/message/RDDL4AASO54AG1?autoload=1&app_absent=0&utm_source=ig" target="_blank" class="whatsapp-link">
+                            Clique aqui para agendar agora mesmo!
+                        </a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong><i class="fas fa-phone"></i> Telefones das Clínicas</strong>
+                        <p><strong>Caruaru:</strong> (81) 99517-2382</p>
+                        <p><strong>Santa Cruz do Capibaribe:</strong> (81) 97900-2381</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong><i class="fab fa-instagram"></i> Redes Sociais</strong>
+                        <p>Acompanhe meu trabalho e fique por dentro das novidades:</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/dranoellebreda/" target="_blank" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong><i class="fas fa-id-card"></i> Registro Profissional</strong>
+                        <p><strong>CRM-PE:</strong> 36749</p>
+                        <p><strong>Especialidade:</strong> Oftalmologia com Fellowship em Plástica Ocular</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form" style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 25px; color: var(--primary-color);"><i class="fas fa-envelope"></i> Envie uma mensagem</h3>
+                    <form style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Nome completo</label>
+                            <input type="text" placeholder="Digite seu nome" style="width: 100%; padding: 14px; border: 2px solid #e0e7e5; border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">E-mail</label>
+                            <input type="email" placeholder="seu@email.com" style="width: 100%; padding: 14px; border: 2px solid #e0e7e5; border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Telefone</label>
+                            <input type="tel" placeholder="(81) 99999-9999" style="width: 100%; padding: 14px; border: 2px solid #e0e7e5; border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">Mensagem</label>
+                            <textarea rows="4" placeholder="Como podemos ajudar?" style="width: 100%; padding: 14px; border: 2px solid #e0e7e5; border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="border: none; cursor: pointer; font-size: 1.1rem; padding: 16px;">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Dra. Noelle Breda Teixeira</strong> - CRM-PE 36749</p>
+            <p>Médica Oftalmologista | Especialista em Plástica Ocular</p>
+            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.8;">
+                &copy; 2026 - Todos os direitos reservados<br>
+                Atendimentos em Recife, Caruaru e Santa Cruz do Capibaribe - PE
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
